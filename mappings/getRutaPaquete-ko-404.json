@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/paquete/404/ruta"
+  },
+  "response": {
+    "status": 404,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "bodyFileName": "getRutaPaquete-ko-404.json"
+  }
+}
