@@ -1,0 +1,269 @@
+{
+	"info": {
+		"_postman_id": "e97e76b5-86d6-4eb9-83c5-7c3b192bc827",
+		"name": "RepartosApiVirtual",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getUsuarios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/usuarios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteUsuario-ok",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/usuario/343",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuario",
+						"343"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addUsuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"pepe\",\r\n  \"apellido\": \"martinez\",\r\n  \"telefono\": \"681111155\",\r\n  \"direccion\": \"sevilla\",\r\n  \"lat\": 2.54323232323,\r\n  \"lon\": 2.545323253232,\r\n  \"email\": \"jose@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/usuario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteUsuario-ko-404",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/usuario/404",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuario",
+						"404"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUsuario-ko-404",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/usuario/404",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuario",
+						"404"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUsuario-ok",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/usuario/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuario",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUsuario-ko-500",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/usuario/500",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuario",
+						"500"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addUsuario-ko-400",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"telefono\": \"666666666\",\r\n  \"direccion\": \"Sevilla\",\r\n  \"fechaReg\": \"12-12-1995\",\r\n  \"lat\": 2.546561617621,\r\n  \"lon\": 24.546561617621\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/usuario400",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuario400"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addPaquete-ok",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"ancho\": 15,\r\n  \"largo\": 30,\r\n  \"alto\": 30,\r\n  \"peso\": 20,\r\n  \"color\": \"verde\",\r\n  \"fecha\": \"12-12-1995\",\r\n  \"user\": 1,\r\n  \"conductor\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/paquete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"paquete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getRutaPaquete-ok",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/paquete/12/ruta",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"paquete",
+						"12",
+						"ruta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getRutaPaquete-ko-404",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "asignacionCamionConductor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"idCamion\": \"68h89ju8n9jun8uh788b\",\r\n  \"idConductor\": \"6b68vt88y9un\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/asignacion",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"asignacion"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
