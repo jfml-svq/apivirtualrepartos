@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "/usuario"
+  },
+  "response": {
+    "status": 201,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "bodyFileName": "addUsuario-ok.json"
+  }
+}
