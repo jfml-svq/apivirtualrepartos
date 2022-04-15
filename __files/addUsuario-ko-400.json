@@ -1,4 +1,7 @@
 {
-  "internalError": 11,
-  "message": "Faltan campos por rellenar"
+  "code": 11,
+  "message": "Validacion de errores",
+  "errors": {
+    "nombre": "no debe ser nulo"
+  }
 }
